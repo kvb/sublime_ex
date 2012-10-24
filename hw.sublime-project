@@ -41,10 +41,12 @@
 			"-isystem",
 			"C:\\MinGW\\include",
 			
-			"-I${folder:${project_path:hw.sublime-project}}\\Qt\\4.7.1\\include\\**",
+			//uncomment this line to see a performance impact on auto completes (~1.2sec)
+			// "-I${folder:${project_path:hw.sublime-project}}\\Qt\\4.7.1\\include\\**",
+
 			//with these two lines the project seems to work
-			// "-I${folder:${project_path:hw.sublime-project}}\\Qt\\4.7.1\\include\\QtCore",
-			// "-I${folder:${project_path:hw.sublime-project}}\\Qt\\4.7.1\\include\\QtGui",
+			"-I${folder:${project_path:hw.sublime-project}}\\Qt\\4.7.1\\include\\QtCore",
+			"-I${folder:${project_path:hw.sublime-project}}\\Qt\\4.7.1\\include\\QtGui",
 
 			//comment out the above two lines and un-comment this, this project will crash everytime when you open cmd_grabber.cpp/.h (or even show it in the 'GoTo anything')
 			// "-IC:\\Qt\\4.7.1\\include\\QtCore",
