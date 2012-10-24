@@ -1,0 +1,59 @@
+{
+	"folders":
+	[
+		{
+			"file_exclude_patterns":
+			[
+				".*",
+				"moc_*.c",
+				"*.d",
+				"*.o",
+				".*",
+				"*.patch",
+				"*.diff",
+				"*.txt",
+				"*.lst",
+				"*.pdf",
+				"*.doc*"
+			],
+			"folder_exclude_patterns":
+			[
+				"debug",
+				"distro",
+				"build",
+				"Qt"
+			],
+			"path": "/C/projects/qt/helloworld"
+		}
+	],
+	"settings":
+	{
+		"sublimeclang_debug_options": true,
+		"sublimeclang_enabled": true,
+		"sublimeclang_options":
+		[
+			"-isystem",
+			"C:\\MinGW\\lib\\gcc\\mingw32\\4.5.0\\include",
+			"-isystem",
+			"C:\\MinGW\\lib\\gcc\\mingw32\\4.5.0\\include\\c++",
+			"-isystem",
+			"C:\\MinGW\\lib\\gcc\\mingw32\\4.5.0\\include\\c++\\mingw32",
+			"-isystem",
+			"C:\\MinGW\\include",
+			
+			"-I${folder:${project_path:hw.sublime-project}}\\Qt\\4.7.1\\include\\**",
+			//with these two lines the project seems to work
+			// "-I${folder:${project_path:hw.sublime-project}}\\Qt\\4.7.1\\include\\QtCore",
+			// "-I${folder:${project_path:hw.sublime-project}}\\Qt\\4.7.1\\include\\QtGui",
+
+			//comment out the above two lines and un-comment this, this project will crash everytime when you open cmd_grabber.cpp/.h (or even show it in the 'GoTo anything')
+			// "-IC:\\Qt\\4.7.1\\include\\QtCore",
+
+
+			"-Wall"
+		],
+		"sublimeclang_time_completions": true,
+		"sublimeclang_show_output_panel": false,
+		"sublimeclang_show_visual_error_marks": false
+	}
+}
